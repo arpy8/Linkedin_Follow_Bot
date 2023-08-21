@@ -33,10 +33,7 @@ class LinkedinBot:
         for button in connect_buttons:
             try:
                 button.click()
-                time.sleep(0.5)
+                time.sleep(0.05)
                 print("Connection request sent successfully.")
             except Exception as e:
                 print("Error sending connection request:", e)
-
-
-
