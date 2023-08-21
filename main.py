@@ -11,19 +11,29 @@ def main():
             data = json.load(json_file)
             user_mail = data.get("gmail", "")
             user_password = data.get("password", "")
+        
             if not user_mail or not user_password:
                 perm_var_set()
+                data = json.load(json_file)
                 user_mail = data.get("gmail", "")
                 user_password = data.get("password", "")
                     
     except FileNotFoundError:
         perm_var_set()
+        data = json.load(json_file)
+        user_mail = data.get("gmail", "")
+        user_password = data.get("password", "")
 
-    with webdriver.Chrome("chromedriver.exe") as driver:
-        driver.maximize_window()
+    finally:
+        data = json.load(json_file)
+        user_mail = data.get("gmail", "")
+        user_password = data.get("password", "")
 
-        time.sleep(0.1)
-        LinkedinBot(driver, user_mail, user_password)
+        with webdriver.Chrome("chromedriver.exe") as driver:
+            driver.maximize_window()
+
+            time.sleep(0.1)
+            LinkedinBot(driver, user_mail, user_password)
 
 
 if __name__ == "__main__":
