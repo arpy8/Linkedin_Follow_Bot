@@ -3,8 +3,8 @@
 ![Python Version](https://img.shields.io/badge/python-3.8%20%7C%203.9-blue)
 ![Selenium Version](https://img.shields.io/badge/selenium-3.141.0-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
-![banner](assets/banner.png)
+   
+![banner](assets/banner.webp)
 
 This is a simple LinkedIn Follow Bot implemented using Selenium, a web automation tool. The bot allows you to automatically follow users on LinkedIn based on certain search criteria. It's important to note that using automated bots on LinkedIn might violate their terms of service, so use this script responsibly and consider the potential consequences.
 
