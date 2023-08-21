@@ -11,7 +11,7 @@ def main():
             data = json.load(json_file)
             user_mail = data["gmail"]
             user_password = data["password"]
-                
+
         if not user_mail or not user_password:
             perm_var_set()
             with open("data.json") as new_json_file:
@@ -19,13 +19,12 @@ def main():
                 user_mail = data["gmail"]
                 user_password = data["password"]
 
-                    
     except FileNotFoundError:
         perm_var_set()
         with open("data.json") as new_json_file:
-                data = json.load(new_json_file)
-                user_mail = data["gmail"]
-                user_password = data["password"]
+            data = json.load(new_json_file)
+            user_mail = data["gmail"]
+            user_password = data["password"]
 
     finally:
         with webdriver.Chrome("chromedriver.exe") as driver:
@@ -37,4 +36,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
