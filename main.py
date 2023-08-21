@@ -13,6 +13,9 @@ def main():
             user_password = data.get("password", "")
             if not user_mail or not user_password:
                 perm_var_set()
+                user_mail = data.get("gmail", "")
+                user_password = data.get("password", "")
+                    
     except FileNotFoundError:
         perm_var_set()
 
