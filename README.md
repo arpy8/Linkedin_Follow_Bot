@@ -42,6 +42,9 @@ This is a simple LinkedIn Follow Bot implemented using Selenium, a web automatio
 
 7. Sit back and watch as the bot logs into your account, and sends connection requests automatically.
 
+## Demo
+![demo](assets/demo.gif)
+
 ## Disclaimer
 
 This bot is intended for educational purposes and personal use only. The use of automated bots on LinkedIn may violate LinkedIn's terms of service. Use this script responsibly and at your own risk.
