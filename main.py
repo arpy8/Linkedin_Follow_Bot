@@ -9,26 +9,25 @@ def main():
     try:
         with open("data.json") as json_file:
             data = json.load(json_file)
-            user_mail = data.get("gmail", "")
-            user_password = data.get("password", "")
-        
-            if not user_mail or not user_password:
-                perm_var_set()
-                data = json.load(json_file)
-                user_mail = data.get("gmail", "")
-                user_password = data.get("password", "")
+            user_mail = data["gmail"]
+            user_password = data["password"]
+                
+        if not user_mail or not user_password:
+            perm_var_set()
+            with open("data.json") as new_json_file:
+                data = json.load(new_json_file)
+                user_mail = data["gmail"]
+                user_password = data["password"]
+
                     
     except FileNotFoundError:
         perm_var_set()
-        data = json.load(json_file)
-        user_mail = data.get("gmail", "")
-        user_password = data.get("password", "")
+        with open("data.json") as new_json_file:
+                data = json.load(new_json_file)
+                user_mail = data["gmail"]
+                user_password = data["password"]
 
     finally:
-        data = json.load(json_file)
-        user_mail = data.get("gmail", "")
-        user_password = data.get("password", "")
-
         with webdriver.Chrome("chromedriver.exe") as driver:
             driver.maximize_window()
 
