@@ -37,7 +37,7 @@ This is a simple LinkedIn Follow Bot implemented using Selenium, a web automatio
 6. Run the executable file:
 
    ```bash
-   python main.exe
+   main.exe
    ```
 
 7. Sit back and watch as the bot logs into your account, and sends connection requests automatically.
